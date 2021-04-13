@@ -30,7 +30,7 @@ function ValidateEmail() {
     let logemail = document.getElementById("logemail").value;
     let emailerror = document.getElementById("emailerror");
     emailerror.innerHTML = "";
-    var emailexpr = /^([\w\d\.\-]+)@([\w\d\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+    var emailexpr = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
    if (!emailexpr.test(logemail)) {
      emailerror.innerHTML= '<span style="font-size: 14px;color:red" >Invalid email address!!</span>'
      return false;
@@ -144,7 +144,8 @@ function ValidatesignEmail() {
     let email = document.getElementById("email").value;
     let emailerr = document.getElementById("emailerr");
     emailerr.innerHTML = "";
-    var emailexpr = /^([\w\d\.\-]+)@([\w\d\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+    // var emailexpr = /^([\w\d\.\-]+)@([\w\d\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+     var emailexpr = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
     if (!emailexpr.test(email)) {
         document.getElementById("email").style.border="2px solid red";
         emailerr.innerHTML= '<span style="font-size: 14px;color:red" >Invalid email address!!</span>'
