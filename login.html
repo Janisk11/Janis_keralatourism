@@ -13,7 +13,7 @@
 
 <body>
   <header >
-    <div class="container-fluid">
+    <div class="container-fluid head">
           <nav class="navbar navbar-expand-lg navbar-light bgclr fixed-top">
             <div>
               <img src="images/logo.png" alt="" style="width: 95%;">
@@ -41,7 +41,7 @@
                 </ul>
                 <form class="form-inline my-auto">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-secondary my-2 my-sm-0 text-white" style="background-color: rgb(167, 71, 167);" type="submit">Search</button>
+                  <button class="btn head_btn" type="submit">Search</button>
                 </form>
               </div>
             </nav>
@@ -49,32 +49,36 @@
      </div>
  </header>
 
+<div class="row">
+  <div class="col-lg-2"></div>
 
- <div class="loginform">
-  <form action="index.html" onsubmit="return(validatelogin());" name="logform"  id="logform"  >
-    <h2>User Login</h2>
-    
-    <div class="form-group">
-      <input type="logemail" onkeyup="return(ValidateEmail());" id="logemail" name="logemail" class="form-control input-lg" autocomplete="off"  placeholder="Email Id" >
-      <label for="email_error" id="emailerror" style="margin: 3px;padding: 3px;"></label>
-    </div>
-  
-    <div class="form-group">
-            <input type="password" id="logpwd" name="logpwd" onkeyup="return(ValidatePwd());" class="form-control input-lg"  placeholder="Password" >
-            <label for="password_error" id="passerror" style="margin: 3px;padding: 3px;"></label>
+    <div class="loginform col-lg-5">
+      <form action="index.html" onsubmit="return(validatelogin());" name="logform"  id="logform"  >
+        <h2>User Login</h2>
+        
+        <div class="form-group">
+          <input type="logemail" onkeyup="return(ValidateEmail());" id="logemail" name="logemail" class="form-control input-lg" autocomplete="off"  placeholder="Email Id" >
+          <label for="email_error" id="emailerror" style="margin: 3px;padding: 3px;"></label>
         </div>
       
-        <div class=" form-group form-check">
-          <label class="form-check-label text-white"> 
-            <input class="form-check-input" style="float: left;" type="checkbox"> Remember me
-          <a class="ml-5 pl-5 text-white" style="float: right;" href="#">Forgot Password</a>
-        </div>
-
         <div class="form-group">
-            <input type="submit" value="Login" class="btn  btn-lg btn-block login-btn"></input>
-        </div>
-  </form>
-  <div class="text-center">Don't have an account? <a href="signup.html">Create Now</a></div>
+                <input type="password" id="logpwd" name="logpwd" onkeyup="return(ValidatePwd());" class="form-control input-lg"  placeholder="Password" >
+                <label for="password_error" id="passerror" style="margin: 3px;padding: 3px;"></label>
+            </div>
+          
+            <div class=" form-group form-check">
+              <label class="form-check-label text-white"> 
+                <input class="form-check-input" style="float: left;" type="checkbox"> Remember me
+              <a class="ml-5 pl-5 text-white" style="float: right;" href="#">Forgot Password</a>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn  btn-lg btn-block login-btn"></input>
+            </div>
+      </form>
+      <div class="text-center">Don't have an account? <a href="signup.html">Create Now</a></div>
+    </div>
+
 </div>
 
 
@@ -83,7 +87,7 @@
 <!-- footer -->
 <footer class="bgclr text-center text-white">
 
-  <div class="container p-4 pb-0">
+  <div class="container pt-4 pb-0">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->

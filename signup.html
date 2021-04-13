@@ -13,7 +13,7 @@
 
 <body onload="firstfocus();">
   <header >
-    <div class="container-fluid">
+    <div class="container-fluid head">
           <nav class="navbar navbar-expand-lg navbar-light bgclr fixed-top">
             <div>
               <img src="images/logo.png" alt="" style="width: 95%;">
@@ -41,7 +41,7 @@
                 </ul>
                 <form class="form-inline my-auto">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-secondary my-2 my-sm-0 text-white" style="background-color: rgb(167, 71, 167);" type="submit">Search</button>
+                  <button class="btn head_btn" type="submit">Search</button>
                 </form>
               </div>
             </nav>
@@ -49,70 +49,72 @@
      </div>
  </header>
 
+<div class="row">
+  <div class="col-lg-2"></div>
+
+    <div class="signup-form col-lg-5">
+      <form action="login.html" name="signup" onsubmit="return validatesignup();" class="form" >
+      <h2>Create an Account</h2>
+      <p class="hint-text">Sign up with your social media account or email address</p>
+      <div class="social-btn text-center">
+        <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+        <a href="#" class="btn btn-info btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+        <a href="#" class="btn btn-danger btn-lg"><i class="fa fa-google"></i> Google</a>
+      </div>
+      <div class="or-seperator"><b>or</b></div>
 
 
-<div class="signup-form">
-  <form action="login.html" name="signup" onsubmit="return validatesignup();" class="form" >
-  <h2>Create an Account</h2>
-  <p class="hint-text">Sign up with your social media account or email address</p>
-  <div class="social-btn text-center">
-    <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a href="#" class="btn btn-info btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-    <a href="#" class="btn btn-danger btn-lg"><i class="fa fa-google"></i> Google</a>
+      <!-- username -->
+          <div class="form-group ">
+            <input type="text" name="username" onkeyup="return(Validateuser());" id="username" class="form-control input-lg"  autocomplete="off" placeholder="Username" >
+            <label for="usererror" id="usererr" ></label>
+          </div>
+
+
+          <!-- mobile number -->
+          <div class="form-group ">
+            <input type="text" name="mobile" id="mobile" onkeyup="return(Validatesignmob());" class="form-control input-lg" autocomplete="off"  placeholder="Mobile Number" >
+            <label for="mobileerr" id="mobileerr" ></label>
+          </div>
+
+
+          <!-- email Id -->
+      <div class="form-group">
+            <input type="email"  name="email" id="email" onkeyup="return(ValidatesignEmail());" class="form-control input-lg"  autocomplete="off" placeholder="Email Id" >
+            <label for="emailerror" id="emailerr" ></label>
+          </div>
+
+
+          <!-- password -->
+      <div class="form-group ">
+              <input type="password"  name="pwd" id="pwd" onkeyup="return(Validatesignpass());"  class="form-control input-lg"  placeholder="Password" >
+              <label for="strength" id="strength" ></label>
+              <br>
+              <small for="pwdformat" id="pwdform"></small>
+          </div>
+
+
+        
+
+          <!-- signup bottun -->
+          <div class="form-group ">
+              <input type="submit" value="Sign Up" class="btn  btn-lg btn-block signup-btn">
+          </div>
+
+
+      </form>
+      <div class="text-center">Already have an account? <a href="login.html">Login here</a></div>
+    </div>
+  <div class="col-lg-2"></div>
+
   </div>
-  <div class="or-seperator"><b>or</b></div>
-
-
-  <!-- username -->
-      <div class="form-group ">
-        <input type="text" name="username" onkeyup="return(Validateuser());" id="username" class="form-control input-lg"  autocomplete="off" placeholder="Username" >
-        <label for="usererror" id="usererr" ></label>
-      </div>
-
-
-      <!-- mobile number -->
-      <div class="form-group ">
-        <input type="text" name="mobile" id="mobile" onkeyup="return(Validatesignmob());" class="form-control input-lg" autocomplete="off"  placeholder="Mobile Number" >
-        <label for="mobileerr" id="mobileerr" ></label>
-      </div>
-
-
-      <!-- email Id -->
-  <div class="form-group">
-        <input type="email"  name="email" id="email" onkeyup="return(ValidatesignEmail());" class="form-control input-lg"  autocomplete="off" placeholder="Email Id" >
-        <label for="emailerror" id="emailerr" ></label>
-      </div>
-
-
-      <!-- password -->
-  <div class="form-group ">
-          <input type="password"  name="pwd" id="pwd" onkeyup="return(Validatesignpass());"  class="form-control input-lg"  placeholder="Password" >
-          <label for="strength" id="strength" ></label>
-          <br>
-          <small for="pwdformat" id="pwdform"></small>
-      </div>
-
-
-     
-
-      <!-- signup bottun -->
-      <div class="form-group ">
-          <input type="submit" value="Sign Up" class="btn  btn-lg btn-block signup-btn">
-      </div>
-
-
-  </form>
-  <div class="text-center">Already have an account? <a href="login.html">Login here</a></div>
-</div>
-
-
 
 
 <!-- footer -->
 
 <footer class="bgclr text-center text-white">
 
-  <div class="container p-4 pb-0">
+  <div class="container pt-4 pb-0">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
